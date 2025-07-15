@@ -1,0 +1,22 @@
+.contact-section {
+  background: #f8f9fa url('../images/Rectangle 10.png') no-repeat center center;
+  background-size: cover;
+  color: #333;
+}
+
+.contact-section i {
+  width: 20px;
+}
+
+.contact-section .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-section .btn-dark {
+  background-color: #000;
+  border: none;
+  font-weight: 500;
+  padding: 10px 0;
+}

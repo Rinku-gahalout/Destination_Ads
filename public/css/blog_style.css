@@ -1,0 +1,29 @@
+.blog-page {
+  background-color: #f8f9fa;
+}
+
+.blog-post img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-page input[type="text"] {
+  padding: 8px 12px;
+}
+
+.blog-page h6 {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.blog-page ul li {
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.blog-page ul li:hover {
+  text-decoration: underline;
+}
