@@ -1,6 +1,6 @@
 <footer class="custom-footer">
   <div class="container-fluid py-5">
-    <div class="row align-items-center mb-4">
+<div class="row align-items-center extra-margin">
       <div class="col-md-4 d-flex align-items-center gap-3">
         <img src="{{ asset('images/dd 1.png') }}" alt="Logo" height="40">
       </div>
