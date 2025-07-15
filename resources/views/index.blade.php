@@ -47,4 +47,63 @@
     </div>
   </div>
 </section>
+
+<section class="stand-for-section">
+  <div class="container">
+    <div class="content">
+      <div class="text">
+        <h2 class="title">WHAT <span class="bold">WE STAND</span> FOR</h2>
+ 
+        <div class="point">
+          <p class="highlight">• Creativity Without Limits</p>
+          <p>We push boundaries to create work that stands out.</p>
+        </div>
+ 
+        <div class="point">
+          <p class="bold">• Strategic Excellence</p>
+          <p>Every idea is rooted in a deep understanding of your goals and audience.</p>
+        </div>
+ 
+        <div class="point">
+          <p class="bold">• Client Collaboration</p>
+          <p>Your vision is at the heart of everything we do.</p>
+        </div>
+      </div>
+ 
+      <div class="image">
+        <img src="{{ asset('images/kenny-febrian-nR1dI28cH58-unsplash 1 (2).png') }}" alt="Team collaboration" />
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">WHAT <span>WE DO</span></h2>
+    <h3 class="main-heading">CREATIVE SERVICES DESIGNED<br> TO <span class="highlight">ELEVATE YOUR BUSINESS</span></h3>
+    <p class="subtitle">OUR TEAM TAKES THE TIME TO UNDERSTAND YOUR BUSINESS, YOUR AUDIENCE, AND YOUR GOALS.</p>
+ 
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon-box">🖥️</div>
+        <h4>Web Design & Development</h4>
+        <p>Cutting-edge, beautiful responsive, visually stunning websites built to convert.</p>
+      </div>
+ 
+      <div class="service-card">
+        <div class="icon-box">📧</div>
+        <h4>Digital Marketing</h4>
+        <p>Boost your reach, engagement, and conversions with result-driven strategies.</p>
+      </div>
+ 
+      <div class="service-card">
+        <div class="icon-box">💡</div>
+        <h4>Branding & Strategy</h4>
+        <p>A strong brand is more than just a logo — it’s the voice of your company.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="background-image-section"></section>
 @endsection
