@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Banner Section -->
-<div class="banner position-relative" style="background-image: url('{{ asset('images/banner (6).png') }}'); background-size: cover; background-position: center; height: 100vh;">
+<div class="banner position-relative" style="background-image: url('{{ asset('images/banner (6).png') }}'); background-size: cover; background-position: center; height: 563px;">
     <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-white text-center">
         <!-- Your content -->
     </div>
@@ -13,12 +13,12 @@
       <p class="intro-text">WE BRING <span>VISION</span> TO BRAND</p>
       <h1>CREATE STUNNING LAYOUTS<br>FOR YOUR WEBSITE.</h1>
       <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-5 text-start">
           <p>
             CREATE STUNNING LAYOUTS FOR YOUR<br>WEBSITE DOLOR SIT AMET, CONCETETUR<br>ADIPISICING ELIT. MAGNA LIGULA GRAVIDA<br>A TELLUS PURUS IN MATTIS MAURIS. LOREM<br>QUAM SAGITTIS QUIS, SIT AMET DOLOR.<br>DOLORE CONCETETUR FERMENTUM NIH VOLUTPAT.<br>E POSUERE.
           </p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 text-start">
           <p>
             CREATE STUNNING LAYOUTS FOR YOUR<br>WEBSITE DOLOR SIT AMET, CONCETETUR<br>ADIPISICING ELIT. MAGNA LIGULA GRAVIDA<br>A TELLUS PURUS IN MATTIS MAURIS. LOREM<br>QUAM SAGITTIS QUIS, SIT AMET DOLOR.<br>DOLORE CONCETETUR FERMENTUM NIH VOLUTPAT.<br>E POSUERE.
           </p>
@@ -50,26 +50,29 @@
 
 <section class="stand-for-section">
   <div class="container">
+
+    <!-- Centered Title -->
+    <h2 class="title text-center">WHAT <span class="bold">WE STAND</span> FOR</h2>
+
     <div class="content">
-      <div class="text">
-        <h2 class="title">WHAT <span class="bold">WE STAND</span> FOR</h2>
- 
-        <div class="point">
-          <p class="highlight">• Creativity Without Limits</p>
-          <p>We push boundaries to create work that stands out.</p>
-        </div>
- 
-        <div class="point">
-          <p class="bold">• Strategic Excellence</p>
-          <p>Every idea is rooted in a deep understanding of your goals and audience.</p>
-        </div>
- 
-        <div class="point">
-          <p class="bold">• Client Collaboration</p>
-          <p>Your vision is at the heart of everything we do.</p>
-        </div>
-      </div>
- 
+     <div class="text">
+  <ul class="points-list">
+    <li class="point">
+      <p class="bold"> Creativity Without Limits</p>
+      <p>We push boundaries to create work that stands out.</p>
+    </li>
+    <li class="point">
+      <p class="bold"> Strategic Excellence</p>
+      <p>Every idea is rooted in a deep understanding of your goals and audience.</p>
+    </li>
+    <li class="point">
+      <p class="bold"> Client Collaboration</p>
+      <p>Your vision is at the heart of everything we do.</p>
+    </li>
+  </ul>
+</div>
+
+
       <div class="image">
         <img src="{{ asset('images/kenny-febrian-nR1dI28cH58-unsplash 1 (2).png') }}" alt="Team collaboration" />
       </div>
