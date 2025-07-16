@@ -11,6 +11,8 @@
 
 .navbar-nav .nav-link {
     color: white !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }
 
 .navbar-nav .nav-link:hover {
@@ -20,6 +22,7 @@
 .navbar-brand {
     color: white !important;
 }
+
 .transition {
     transition: all 0.3s ease-in-out;
 }
@@ -30,6 +33,40 @@
 
 #scrollNavbar.show {
     display: block !important;
+}
+.custom-navbar-container {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+    padding-top: 3px;
+}
+#scrollNavbar {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#scrollNavbar.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 1000; /* Ensure it's above */
+}
+
+
+
+/* Mobile responsiveness improvements */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
 
 
@@ -312,7 +349,6 @@
 }
 
 /* footer */
-
 .custom-footer {
   background: #0f0f0f url('../images/footer-bg.png') center center no-repeat;
   background-size: cover;
@@ -332,7 +368,7 @@
 }
 
 .custom-footer .social-icons a {
-  color: #ccc;
+  color: #ffffff;
   margin-right: 15px;
   font-size: 16px;
   transition: color 0.3s;
@@ -370,7 +406,7 @@
 .social-icons{
   margin-top: 20px;
   margin-top: -1rem !important;
-  margin-left: 48px;
+  margin-left: 48px !important;
 }
 .social-icons .big-icon {
   font-size: 35px; /* or 32px, 40px — as needed */
@@ -378,4 +414,66 @@
 .py-5{
   padding-top: 3rem !important;
   padding-bottom: 0rem!important;
+}
+/* Responsive Overrides for Tablets & Mobiles */
+@media (max-width: 991.98px) {
+  .custom-footer {
+    height: auto;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .text-white {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .address {
+    padding-left: 11px;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .extra-margin {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .text-white-heading, h5 {
+    font-size: 1.4rem;
+    padding-top: 10px;
+  }
+
+  .py-5 {
+    padding-top: 0rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .footer-logo{
+    padding-left: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-white.text-start {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .text-white.text-start > div {
+    width: 48%;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .mobile-social-icons{
+    font-size: 30px !important;
+  }
 }
