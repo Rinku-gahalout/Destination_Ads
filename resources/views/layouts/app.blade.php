@@ -20,7 +20,7 @@
     @include('includes.header')
 
     <!-- Page Content -->
-    <main class="py-4">
+    <main class="py-0">
         @yield('content')
     </main>
 
