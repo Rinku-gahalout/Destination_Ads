@@ -14,10 +14,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/service_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/service_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact_style.css') }}">
-
 </head>
 <body>
 
