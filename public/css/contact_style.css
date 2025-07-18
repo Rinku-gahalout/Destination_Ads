@@ -2,6 +2,7 @@
   background: #f8f9fa url('../images/Rectangle 10.png') no-repeat center center;
   background-size: cover;
   color: #333;
+  padding-bottom: 3rem !important;
 }
 
 .contact-section i {

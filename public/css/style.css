@@ -446,10 +446,12 @@
     margin-bottom: 40px;
   }
 
-  .text-white-heading, h5 {
-    font-size: 1.4rem;
-    padding-top: 10px;
-  }
+.text-white-heading, h5 { 
+  font-size: 1.4rem; 
+  padding-top: 10px; 
+  padding-right: 11px; 
+  white-space: nowrap; 
+}
 
   .py-5 {
     padding-top: 0rem !important;
