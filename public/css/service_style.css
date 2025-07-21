@@ -119,14 +119,25 @@
     text-transform: uppercase;
 }
 
-/* .cta-section .btn-dark:hover {
-    background-color: #000000;
-    color: #ffffff;
-} */
+.cta-section .btn-dark:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 
 
 /* Mobile */
 @media (max-width: 576px) {
+    .banner {
+        height: auto !important;
+        padding: 115px 20px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .banner .container {
+        padding: 0; 
+    }
+
     .images-row {
         padding-left: 20px;
         padding-right: 20px;

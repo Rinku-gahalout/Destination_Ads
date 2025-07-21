@@ -8,9 +8,6 @@
             <!-- Your content -->
         </div>
     </div>
-
-
-
     <div class="container-fluid p-0">
 
         <!-- Image Section -->
@@ -37,15 +34,15 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-4 mb-4">
-                        <h2>1232</h2>
+                         <h2 class="counter" data-target="1232">0</h2>
                         <p>Projects</p>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <h2>455</h2>
+                        <h2 class="counter" data-target="455">0</h2>
                         <p>Clients</p>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <h2>1176</h2>
+                        <h2 class="counter" data-target="1176">0</h2>
                         <p>Followers</p>
                     </div>
                 </div>
@@ -61,3 +58,27 @@
         </div>
     </div>
 @endsection
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / 100; // Adjust for speed
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20); // Adjust delay for smoothness
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+});
+</script>
+

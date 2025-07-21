@@ -44,7 +44,7 @@
 <script>
   window.addEventListener("scroll", function () {
     const scrollNavbar = document.getElementById("scrollNavbar");
-    if (window.scrollY > 100) {
+    if (window.scrollY > 20) {
       scrollNavbar.classList.add("show");
     } else {
       scrollNavbar.classList.remove("show");
