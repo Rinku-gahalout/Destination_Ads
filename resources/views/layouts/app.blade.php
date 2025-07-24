@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/blog_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/service_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/blog-details_style.css') }}">
 </head>
 <body>
 

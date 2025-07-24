@@ -1,128 +1,94 @@
-.images-row{
-    padding-left: 150px;
-    padding-right: 65px; 
-    padding-top: 130px ! IMPORTANT;
-}
-.images-row img {
-    width: 80%;
-    height: 564px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.images-row {
+    padding: 130px 0 0 0; /* Remove side padding to allow center alignment */
+    text-align: center;   /* Center the inner content */
 }
 
-.images-row img:hover {
+.team-image {
+    width: 100%;
+    max-width: 1000px;  /* Max width on large screens */
+    height: 564;       /* Auto height for responsive scaling */
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-block; /* Required for text-align: center to apply */
+}
+
+.team-image:hover {
     transform: scale(1.05);
 }
 
 .headline-text {
-    text-align: center;                
     padding: 60px 15px;
-    color: #000000;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;         
+    text-transform: uppercase;
+    color: #000;
 }
-
 .headline-text div {
-    font-weight: 400;         
-    font-style: normal;               
-    font-size: 64px;                  
-    line-height: 152%;               
-    letter-spacing: 12px;             
-}
-.stats-section {
-    background-color: #000000; /* Black background */
-    padding: 80px 20px;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    line-height: 152%;
+    letter-spacing: 12px;
+    font-weight: 400;
 }
 
+.stats-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
 .stats-section h2 {
-    font-weight: 700;
     font-size: 68px;
-    line-height: 100%;
+    font-weight: 700;
     letter-spacing: 15.4px;
     margin-bottom: 5px;
 }
-
 .stats-section p {
     font-size: 1.25rem;
-    color: #cccccc;
-    margin-bottom: 0;
+    color: #ccc;
 }
+
 .cta-section {
-    position: relative;
-    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     height: 500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    z-index: 1;
-    background-size: 100% auto;
-    background-position: bottom;
-    background-repeat: no-repeat;
 }
-/* Add semi-transparent overlay */
-/* .cta-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-} */
-
 .cta-section h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 64px;
-    line-height: 152%;
-    letter-spacing: 0.2em; /* 20% letter spacing */
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.cta-section p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 152%;
     letter-spacing: 0.2em;
-    text-align: center;
+    color: #000;
     text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 30px;
-    max-width: 991px;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap; 
 }
-
-
+.cta-section p {
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000;
+    max-width: 991px;
+    white-space: nowrap;
+    margin: 0 auto 30px;
+}
 .cta-section .btn-dark {
     padding: 22px 152px;
     font-weight: 600;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
+    background-color: #000;
+    color: #fff;
     border-radius: 10px;
-    transition: background 0.3s ease;
     text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.cta-section .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.cta-section .btn-dark:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
 
 
 /* Mobile */
@@ -158,6 +124,7 @@
     }
     .headline-text {
         padding: 40px 10px;
+        padding-top: 0px;
     }
 
     .headline-text div {

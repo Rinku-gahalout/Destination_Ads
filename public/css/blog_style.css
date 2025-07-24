@@ -1,12 +1,18 @@
 .blog-page {
-  background-color: #f8f9fa;
+  background-image: url('/images/Rectangle 34.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding-top: 80px !important;
 }
 
 .blog-post img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+    object-fit: cover;
+    width: 796px;
+    height: 405px;
+    border-radius: 30px !important;
 }
 
 .blog-page input[type="text"] {

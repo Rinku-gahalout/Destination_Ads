@@ -1,13 +1,29 @@
 @extends('layouts.app')
 
+
 @section('content')
 
 <!-- ✅ Banner Section -->
-<div class="blog-banner position-relative mb-5" style="background-image: url('{{ asset('images/Rectangle 6.png') }}'); background-size: cover; background-position: center; height: 350px;">
-  <div class="container h-100 d-flex justify-content-center align-items-center">
-    <!-- <h1 class="text-white fw-bold display-5 text-uppercase">Our Blog</h1> -->
+<div class="contact-banner d-flex align-items-center justify-content-center" 
+     style="background-image: url('{{ asset('images/Rectangle 6.png') }}');">
+  <div class="overlay"></div>
+  <div class="container h-100 d-flex justify-content-center align-items-center" style="position: relative; z-index: 2;">
+    <h1 class="text-white fw-bold display-5 text-uppercase">BLOGS</h1>
   </div>
 </div>
+<section class="glow-bar-section">
+  <div class="glow-bar-track">
+    <div class="glow-bar">
+      @for ($i = 0; $i < 10; $i++) {{-- Repeat enough times for seamless loop --}}
+        <span>– DIRECT BOOK –</span>
+        <span>– FASTEST FARE ALERT –</span>
+        <span>– INSTANT FARE LOCK –</span>
+        <span>– UNMATCHED DEALS –</span>
+      @endfor
+    </div>
+  </div>
+</section>
+
 
 <!-- ✅ Blog Page Content -->
 <section class="blog-page py-5">
@@ -15,15 +31,20 @@
     <div class="row">
       <!-- Left Blog Posts -->
       <div class="col-md-8">
-        @for ($i = 0; $i < 3; $i++)
-        <div class="blog-post mb-5">
-          <img src="{{ asset('images/blog.jpg') }}" class="img-fluid mb-3 rounded" alt="Blog Image">
-          <p class="fw-semibold">
-            Zxcvbnmasdfghjklqwertyuiopzxcvbnmasdfgqwertyugf.
-          </p>
-        </div>
-        @endfor
+        @foreach($blogs as $blog)
+          <div class="blog-post mb-5">
+            <a href="{{ url($blog->category . '/' . $blog->blog_url) }}">
+            <img src="{{ asset($blog->image) }}" class="img-fluid mb-3 rounded" alt="{{ $blog->main_headline }}">
+            </a>
+            <p class="fw-semibold">{{ $blog->main_headline }}</p>
+          </div>
+        @endforeach
+
+        @if ($blogs->hasPages())
+          <div id="paginationLinks" class="mt-4">{{ $blogs->links() }}</div>
+        @endif
       </div>
+
 
       <!-- Right Sidebar -->
       <div class="col-md-4">

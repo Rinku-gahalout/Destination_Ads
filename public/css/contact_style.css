@@ -1,23 +1,53 @@
 .contact-section {
-  background: #f8f9fa url('../images/Rectangle 10.png') no-repeat center center;
+  background: #f8f9fa url('../images/Rectangle 34.png') no-repeat center center;
   background-size: cover;
   color: #333;
-  padding-bottom: 3rem !important;
+  padding: 2rem 1rem !important; /* Mobile default padding */
 }
 
-.contact-section i {
-  width: 20px;
-}
-
+/* Form controls */
 .contact-section .form-control {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 14px;
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Button styling */
 .contact-section .btn-dark {
   background-color: #000;
   border: none;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Icon width (if used in input group) */
+.contact-section i {
+  width: 20px;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 5rem 3rem;
+  }
+
+  .contact-section .btn-dark {
+    width: auto;
+    padding: 12px 30px;
+  }
+
+  .contact-section .form-control {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section h3 {
+    text-align: center;
+  }
 }

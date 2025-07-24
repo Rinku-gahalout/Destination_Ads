@@ -3,11 +3,26 @@
 @section('content')
 
 <!-- ✅ Banner Section -->
-<div class="contact-banner position-relative mb-5" style="background-image: url('{{ asset('images/Rectangle 6.png') }}'); background-size: cover; background-position: center; height: 300px;">
-  <div class="container h-100 d-flex justify-content-center align-items-center">
-    <h1 class="text-white fw-bold display-5 text-uppercase">Contact Us</h1>
+<div class="contact-banner d-flex align-items-center justify-content-center" 
+     style="background-image: url('{{ asset('images/Rectangle 6.png') }}');">
+  <div class="overlay"></div>
+  <div class="container h-100 d-flex justify-content-center align-items-center" style="position: relative; z-index: 2;">
+    <h1 class="text-white fw-bold display-5 text-uppercase">CONTACT US</h1>
   </div>
 </div>
+
+<section class="glow-bar-section">
+  <div class="glow-bar-track">
+    <div class="glow-bar">
+      @for ($i = 0; $i < 10; $i++) {{-- Repeat enough times for seamless loop --}}
+        <span>– DIRECT BOOK –</span>
+        <span>– FASTEST FARE ALERT –</span>
+        <span>– INSTANT FARE LOCK –</span>
+        <span>– UNMATCHED DEALS –</span>
+      @endfor
+    </div>
+  </div>
+</section>
 
 <!-- ✅ Contact Section -->
 <section class="contact-section py-5">
@@ -19,7 +34,7 @@
         <h3 class="fw-bold text-dark">Let's talk with us</h3>
         <p>Questions, comments, or suggestions? Simply fill in the form and we’ll be in touch shortly.</p>
 
-        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-dark"></i> qwertyuiqasdfghjkl<br>tilak nagar 110018</p>
+        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-dark"></i> qwertyuiqasdfghjkl tilak nagar 110018</p>
         <p class="mb-2"><i class="fas fa-phone-alt me-2 text-dark"></i> +91 7838875xxx</p>
         <p><i class="fas fa-envelope me-2 text-dark"></i> destinationads@gmail.com</p>
       </div>
