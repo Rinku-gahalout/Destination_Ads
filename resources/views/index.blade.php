@@ -98,9 +98,18 @@
       </div>
 
       <!-- Image content -->
-      <div class="image">
-        <img src="{{ asset('images/kenny-febrian-nR1dI28cH58-unsplash 1 (2).png') }}" alt="Team collaboration" />
-      </div>
+<div class="position-relative main-image-wrapper">
+  <!-- Base background image -->
+  <div class="image">
+    <img src="{{ asset('images/kenny-febrian-nR1dI28cH58-unsplash 1 (2).png') }}" alt="Team collaboration" class="img-fluid w-100" />
+  </div>
+
+  <!-- Overlay image on top -->
+  <div class="overlay-image d-none d-md-block">
+    <img src="{{ asset('images/element4 1.png') }}" alt="Overlay Element" class="img-fluid" />
+  </div>
+</div>
+
     </div>
   </div>
 </section>

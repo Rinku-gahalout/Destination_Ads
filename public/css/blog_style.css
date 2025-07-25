@@ -9,11 +9,17 @@
 }
 
 .blog-post img {
-    object-fit: cover;
-    width: 796px;
-    height: 405px;
-    border-radius: 30px !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px !important;
 }
+.blog-post p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
 
 .blog-page input[type="text"] {
   padding: 8px 12px;
@@ -32,4 +38,100 @@
 
 .blog-page ul li:hover {
   text-decoration: underline;
+}
+/* Hide category section on mobile */
+@media (max-width: 991.98px) {
+  .blog-categories {
+    display: none !important;
+  }
+
+  /* Optional: If your layout has display:flex on row or container */
+  .blog-page .row,
+  .blog-page .container {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Blog Post Animation */
+  .blog-post {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: transform, opacity;
+  }
+
+  .blog-post.animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Category Sidebar Animation */
+  .blog-page .col-md-4 {
+    opacity: 0;
+    transform: translateX(60px) scale(0.96);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    will-change: transform, opacity;
+  }
+
+  .blog-page .col-md-4.animate {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  /* Optional: Hover effect for blog cards */
+  .blog-post:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: transform 0.4s ease;
+  }
+    /* Animate the whole category box */
+  .blog-categories {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  .blog-categories.animate {
+    opacity: 1;
+    transform: translateY(0);
+            padding-left: 50px;
+  }
+
+  /* Animate each list item */
+  .blog-categories ul li {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease;
+  }
+
+  .blog-categories.animate ul li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Staggered delay for each category item */
+  .blog-categories.animate ul li:nth-child(1) { transition-delay: 0.1s; }
+  .blog-categories.animate ul li:nth-child(2) { transition-delay: 0.2s; }
+  .blog-categories.animate ul li:nth-child(3) { transition-delay: 0.3s; }
+  .blog-categories.animate ul li:nth-child(4) { transition-delay: 0.4s; }
+  .blog-categories.animate ul li:nth-child(5) { transition-delay: 0.5s; }
+  .blog-categories.animate ul li:nth-child(6) { transition-delay: 0.6s; }
+  .blog-categories.animate ul li:nth-child(7) { transition-delay: 0.7s; }
+  .blog-categories.animate ul li:nth-child(8) { transition-delay: 0.8s; }
+}
+
+@media (max-width: 576px) {
+  .blog-page {
+      padding-top: 50px !important;
+  }
+
+  .blog-post img {
+    object-fit: cover;
+    width: 796px;
+    height: 200px;
+    border-radius: 30px !important;
+  }
+    .blog-post p {
+    font-size: 14px;
+  }
 }

@@ -87,22 +87,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
 
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const increment = target / 100; // Adjust for speed
+    const startCounting = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 100;
 
+        const updateCount = () => {
             if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 20); // Adjust delay for smoothness
+                count += increment;
+                counter.innerText = Math.ceil(count);
+                setTimeout(updateCount, 40);
             } else {
                 counter.innerText = target;
             }
         };
 
         updateCount();
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                startCounting(counter);
+                obs.unobserve(counter); // Run once
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% visible
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
     });
 });
 </script>
+
 

@@ -190,25 +190,41 @@
 
 /* Mobile responsiveness improvements */
 @media (max-width: 991.98px) {
-    .navbar-collapse {
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
-    }
+    #mainNavbar.navbar-open .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark */
+    backdrop-filter: blur(12px); /* glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* white border */
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
 
-    .navbar-nav .nav-link {
-        padding: 0.75rem 1rem;
-        font-size: 1.1rem;
-        text-align: center;
-    }
-    .custom-navbar-container {
-    padding-right: 2rem !important;
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff !important;
+  }
+
+  .custom-navbar-container {
+    padding-right: 1rem !important;
     padding-left: 1rem !important;
     padding-top: 3px;
   }
-    .navbar-logo {
+
+  .navbar-logo {
     height: 32px;
   }
 }
+
 
 /* index page css */
 .layout-section {
@@ -431,7 +447,6 @@
   }
 }
 
-
 .stand-for-section {
   background: url('/images/Rectangle%2032.png') no-repeat center center;
   background-size: cover;
@@ -450,6 +465,7 @@
   .content {
     gap: 173px;
     flex-wrap: nowrap;
+    margin-right: 63px;
     margin-left: 60px;
     margin-top: 55px;
   }
@@ -460,6 +476,23 @@
     border-radius: 10px;
     width: 469px;
   }
+  .main-image-wrapper {
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 250px;         /* Adjust to position where you want */
+  right: 425px;       /* Or use left / bottom */
+  z-index: 5;
+  pointer-events: none; /* Optional: allow clicks to pass through */
+}
+
+.overlay-image img {
+  max-width: 150px;   /* Resize as needed */
+  height: auto;
+}
+
 
   .text {
     margin-top: 68px;

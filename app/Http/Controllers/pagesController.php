@@ -25,7 +25,7 @@ class PagesController extends Controller
     }
 
     public function blog() {
-        $blogs = Blog::where('category', 'blog')->latest()->paginate(3);
+        $blogs = Blog::where('category', 'blog')->latest()->paginate(4);
         return view('blogs.blog' , compact('blogs'));
     }
 
